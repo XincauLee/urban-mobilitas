@@ -9,13 +9,15 @@
                 Publishing Ideas That Shape the Future
             </h1>
             <p class="font-sans text-lg text-gray-600 mb-8 leading-relaxed">
-                Mitra penerbitan profesional untuk buku akademik, monograf, dan karya ilmiah berstandar nasional. Kami berkomitmen mendukung pengembangan ilmu pengetahuan dan literasi Indonesia.
+                Penerbit karya ilmiah dan buku akademik berstandar nasional. Hadir untuk mendukung dan melayani kebutuhan literasi Indonesia.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="{{ route('about') }}" class="bg-oxford text-white hover:bg-oxford/90 px-8 py-4 rounded-sm font-medium text-center shadow-lg transition-transform hover:scale-[0.98]">
                     Lihat Profil Kami
                 </a>
-                <a href="{{ route('contact') }}" class="border border-oxford text-oxford hover:bg-oxford/5 px-8 py-4 rounded-sm font-medium text-center transition-colors">
+                <a href="https://wa.me/6281275392906?text=Halo%20Admin%20PT%20Urban%20Mobilitas%20Indragiri,%20saya%20ingin%20konsultasi%20tentang%20penerbitan%20buku"
+                    target="_blank"
+                    class="border border-oxford text-oxford hover:bg-oxford/5 px-8 py-4 rounded-sm font-medium text-center transition-colors">
                     Konsultasi Penerbitan
                 </a>
             </div>
@@ -35,7 +37,7 @@
     <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <h2 class="font-serif text-4xl md:text-5xl text-oxford mb-4">Sekilas Tentang Kami</h2>
         <div class="w-24 h-1 bg-gold mx-auto mb-8"></div>
-        
+
         <div class="max-w-3xl mx-auto">
             <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                 PT. Urban Mobilitas Indragiri adalah perusahaan penerbit yang bergerak di bidang publikasi buku akademik dan umum. Kami berkomitmen untuk mendukung pengembangan ilmu pengetahuan dan meningkatkan literasi nasional melalui penerbitan karya-karya berkualitas.
@@ -86,8 +88,10 @@
         <p class="font-sans text-base md:text-lg leading-relaxed text-white/80 mb-8 max-w-2xl mx-auto">
             Bergabunglah dengan ratusan penulis yang telah mempercayakan karya mereka kepada kami. Mari wujudkan ide Anda menjadi buku yang menginspirasi.
         </p>
-        <a href="{{ route('contact') }}" class="inline-block bg-gold text-oxford hover:bg-gold/90 rounded-sm px-8 py-6 font-sans font-medium tracking-wide shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[0.98]">
-            Kirim Naskah Sekarang
+        <a href="https://wa.me/6281275392906?text=Halo%20Admin%20PT%20Urban%20Mobilitas%20Indragiri,%20saya%20ingin%20konsultasi%20tentang%20penerbitan%20buku"
+            target="_blank"
+            class="inline-block bg-gold text-oxford hover:bg-gold/90 rounded-sm px-8 py-6 font-sans font-medium tracking-wide shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[0.98]">
+            Konsultasi Sekarang
         </a>
     </div>
 </section>
