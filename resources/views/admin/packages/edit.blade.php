@@ -45,27 +45,29 @@
                 <textarea name="description" rows="4" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>{{ old('description', $book->description) }}</textarea>
             </div>
 
-            {{-- BAGIAN COVER DENGAN PREVIEW --}}
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Cover Buku</label>
                 
                 <div class="flex items-end gap-6 mb-4">
-                    {{-- 1. Cover Lama (Database) --}}
+                    {{-- 1. Cover Lama --}}
                     @if($book->cover_image)
-                        <div>
-                            <span class="text-xs text-gray-500 mb-1 block font-semibold">Cover Saat Ini:</span>
-                            <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Cover Buku" class="h-32 w-24 object-cover rounded-sm border border-gray-200 shadow-sm">
+                        <div class="bg-gray-100 p-1 border border-gray-200 rounded-sm">
+                            <span class="text-xs text-gray-500 mb-1 block font-semibold text-center">Cover Saat Ini</span>
+                            {{-- Ubah ke object-contain --}}
+                            <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Cover Buku" class="h-32 w-24 object-contain bg-white">
                         </div>
                     @endif
 
-                    {{-- 2. Preview Cover Baru (Hidden by default) --}}
+                    {{-- 2. Preview Cover Baru --}}
                     <div id="preview-container" class="hidden">
-                        <span class="text-xs text-gray-500 mb-1 block font-semibold text-gold">Akan Diganti Menjadi:</span>
-                        <img id="img-preview" class="h-32 w-24 object-cover rounded-sm border-2 border-gold shadow-sm">
+                        <div class="bg-gray-50 p-1 border-2 border-gold rounded-sm border-dashed">
+                            <span class="text-xs text-gray-500 mb-1 block font-semibold text-gold text-center">Akan Diganti:</span>
+                            {{-- Ubah ke object-contain --}}
+                            <img id="img-preview" class="h-32 w-24 object-contain bg-white">
+                        </div>
                     </div>
                 </div>
 
-                {{-- Input File dengan onchange="previewImage()" --}}
                 <input type="file" name="cover_image" id="cover_image" onchange="previewImage()" 
                        class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold file:bg-oxford/10 file:text-oxford hover:file:bg-oxford/20">
                 <p class="mt-1 text-xs text-gray-500">Biarkan kosong jika tidak ingin mengganti cover.</p>
@@ -79,26 +81,21 @@
     </div>
 </div>
 
-{{-- SCRIPT JAVASCRIPT UNTUK PREVIEW --}}
 <script>
     function previewImage() {
         const image = document.querySelector('#cover_image');
         const imgPreview = document.querySelector('#img-preview');
         const previewContainer = document.querySelector('#preview-container');
 
-        // Pastikan ada file yang dipilih
         if (image.files && image.files[0]) {
             const oFReader = new FileReader();
             oFReader.readAsDataURL(image.files[0]);
 
             oFReader.onload = function(oFREvent) {
-                // Tampilkan gambar hasil baca file
                 imgPreview.src = oFREvent.target.result;
-                // Munculkan container preview
                 previewContainer.classList.remove('hidden');
             }
         } else {
-            // Jika user cancel pilih file, sembunyikan preview
             previewContainer.classList.add('hidden');
         }
     }

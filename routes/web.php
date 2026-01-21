@@ -6,8 +6,10 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\BookController as AdminBookController;
 use App\Http\Controllers\Admin\MessageController as AdminMessageController;
+use App\Http\Controllers\Admin\PackageController as AdminPackageController; // Import Controller Paket
 use App\Models\Book;
 use App\Models\ContactMessage;
+use App\Models\Package; // Import Model Paket
 
 /*
 |--------------------------------------------------------------------------
@@ -54,19 +56,17 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         
         $stats = [
-            // Hitung total buku
             'total_books'      => Book::count(),
-            
-            // Hitung penulis unik (tidak duplikat)
             'total_authors'    => Book::distinct('author')->count('author'),
-            
-            // Hitung kategori unik (tidak duplikat)
             'total_categories' => Book::distinct('category')->count('category'),
+            'total_packages'   => Package::count(), // Tambahan statistik paket
         ];
 
         return view('admin.dashboard', compact('stats'));
     })->name('dashboard');
 
+    // CRUD Routes
     Route::resource('books', AdminBookController::class);
+    Route::resource('packages', AdminPackageController::class); // <-- Route Baru
     Route::resource('messages', AdminMessageController::class)->only(['index', 'destroy']);
 });

@@ -6,11 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Package extends Model
 {
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'price',
+        'features',
+        'is_popular',
+        'cta_link'
+    ];
 
-    // Cast kolom features agar otomatis jadi Array saat diambil
     protected $casts = [
-        'features' => 'array',
+        'features' => 'array', // Otomatis convert JSON <-> Array
         'is_popular' => 'boolean',
     ];
 }

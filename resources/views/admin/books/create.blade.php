@@ -11,38 +11,51 @@
             <div class="grid grid-cols-2 gap-6">
                 <div class="col-span-2">
                     <label class="block text-sm font-medium text-gray-700 mb-2">Judul Buku</label>
-                    <input type="text" name="title" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                    <input type="text" name="title" value="{{ old('title') }}" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
                 </div>
                 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Penulis</label>
-                    <input type="text" name="author" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                    <input type="text" name="author" value="{{ old('author') }}" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Tahun Terbit</label>
-                    <input type="number" name="published_year" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                    <input type="number" name="published_year" value="{{ old('published_year') }}" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">ISBN</label>
-                    <input type="text" name="isbn" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                    <input type="text" name="isbn" value="{{ old('isbn') }}" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Kategori</label>
-                    <input type="text" name="category" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" placeholder="Contoh: Pendidikan, Novel" required>
+                    <select name="category" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                        <option value="" disabled selected>Pilih Kategori</option>
+                        <option value="Ilmiah" {{ old('category') == 'Ilmiah' ? 'selected' : '' }}>Ilmiah</option>
+                        <option value="Fiksi" {{ old('category') == 'Fiksi' ? 'selected' : '' }}>Fiksi</option>
+                    </select>
                 </div>
             </div>
 
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Deskripsi/Sinopsis</label>
-                <textarea name="description" rows="4" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required></textarea>
+                <textarea name="description" rows="4" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>{{ old('description') }}</textarea>
             </div>
 
+            {{-- BAGIAN COVER DENGAN PREVIEW --}}
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Cover Buku</label>
-                <input type="file" name="cover_image" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold file:bg-oxford/10 file:text-oxford hover:file:bg-oxford/20">
+                
+                {{-- Container Preview (Hidden by default karena belum ada gambar) --}}
+                <div id="preview-container" class="hidden mb-3">
+                    <span class="text-xs text-gray-500 mb-1 block font-semibold text-gold">Preview Cover:</span>
+                    <img id="img-preview" class="h-32 w-24 object-cover rounded-sm border-2 border-gold shadow-sm">
+                </div>
+
+                <input type="file" name="cover_image" id="cover_image" onchange="previewImage()" 
+                       class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold file:bg-oxford/10 file:text-oxford hover:file:bg-oxford/20">
             </div>
 
             <div class="pt-4 border-t border-gray-100 flex justify-end space-x-3">
@@ -52,4 +65,30 @@
         </form>
     </div>
 </div>
+
+{{-- SCRIPT JAVASCRIPT UNTUK PREVIEW --}}
+<script>
+    function previewImage() {
+        const image = document.querySelector('#cover_image');
+        const imgPreview = document.querySelector('#img-preview');
+        const previewContainer = document.querySelector('#preview-container');
+
+        // Pastikan ada file yang dipilih
+        if (image.files && image.files[0]) {
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                // Tampilkan gambar hasil baca file
+                imgPreview.src = oFREvent.target.result;
+                // Munculkan container preview (hapus class hidden)
+                previewContainer.classList.remove('hidden');
+            }
+        } else {
+            // Jika user cancel pilih file, sembunyikan preview
+            previewContainer.classList.add('hidden');
+            imgPreview.src = "";
+        }
+    }
+</script>
 @endsection

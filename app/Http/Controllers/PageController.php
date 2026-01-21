@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
-use App\Models\Package; // Tambahkan import Model Package
+use App\Models\Package;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -38,10 +38,7 @@ class PageController extends Controller
 
     public function services()
     {
-        // 1. Ambil data paket dari database (Logic Baru)
         $packages = Package::all();
-
-        // 2. Data Services static (Logic Lama)
         $services = [
             [
                 'id' => 1,
@@ -81,7 +78,6 @@ class PageController extends Controller
             ]
         ];
 
-        // 3. Kirim kedua variable ($services dan $packages) ke view
         return view('services', compact('services', 'packages'));
     }
 
@@ -122,11 +118,31 @@ class PageController extends Controller
         return view('submission', compact('procedures'));
     }
 
-    public function portfolio()
+    public function portfolio(Request $request)
     {
-        $books = Book::orderBy('created_at', 'desc')->get();
+        $query = Book::orderBy('created_at', 'desc');
+
+        if ($request->has('category') && $request->category != 'Semua') {
+            $query->where('category', $request->category);
+        }
+
+        $books = $query->paginate(30)->withQueryString();
         $categories = Book::select('category')->distinct()->pluck('category');
+
         return view('portfolio', compact('books', 'categories'));
+    }
+
+    // Method Baru untuk Halaman Detail
+    public function bookDetail(Book $book)
+    {
+        // Rekomendasi buku lain dengan kategori yang sama (acak 4 buku)
+        $relatedBooks = Book::where('id', '!=', $book->id)
+                            ->where('category', $book->category)
+                            ->inRandomOrder()
+                            ->limit(4)
+                            ->get();
+
+        return view('book-detail', compact('book', 'relatedBooks'));
     }
 
     public function contact()
