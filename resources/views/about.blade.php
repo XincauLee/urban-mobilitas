@@ -207,7 +207,7 @@
                                     </div>
                                     <span class="text-gray-700 font-bold text-sm">NPWP Perusahaan</span>
                                 </div>
-                                <p class="text-gray-500 text-xs font-mono tracking-wider ml-7">00.000.000.0-000.000</p>
+                                <p class="text-gray-500 text-xs font-mono tracking-wider ml-7">Tersedia & Valid</p>
                             </div>
 
                             {{-- NIB --}}
@@ -220,7 +220,7 @@
                                     </div>
                                     <span class="text-gray-700 font-bold text-sm">NIB (Berusaha)</span>
                                 </div>
-                                <p class="text-gray-500 text-xs font-mono tracking-wider ml-7">1234567890123</p>
+                                <p class="text-gray-500 text-xs font-mono tracking-wider ml-7">0701260091951</p>
                             </div>
 
                             {{-- SK Kemenkumham --}}
@@ -233,7 +233,7 @@
                                     </div>
                                     <span class="text-gray-700 font-bold text-sm">SK Kemenkumham</span>
                                 </div>
-                                <p class="text-gray-500 text-xs font-mono tracking-wider ml-7">AHU-00000.AH.00.00.2024</p>
+                                <p class="text-gray-500 text-xs font-mono tracking-wider ml-7">AHU-001340.AH.01.30.Tahun 2026</p>
                             </div>
 
                             {{-- Sertifikat Standar --}}
