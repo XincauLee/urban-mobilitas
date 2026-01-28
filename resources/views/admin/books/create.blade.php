@@ -11,27 +11,28 @@
             <div class="grid grid-cols-2 gap-6">
                 <div class="col-span-2">
                     <label class="block text-sm font-medium text-gray-700 mb-2">Judul Buku</label>
-                    <input type="text" name="title" value="{{ old('title') }}" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                    {{-- Added: border, bg-gray-50, px-3, py-2 --}}
+                    <input type="text" name="title" value="{{ old('title') }}" class="w-full rounded-sm border border-gray-300 bg-gray-50 px-3 py-2 focus:bg-white focus:border-gold focus:ring-gold shadow-sm" required>
                 </div>
                 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Penulis</label>
-                    <input type="text" name="author" value="{{ old('author') }}" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                    <input type="text" name="author" value="{{ old('author') }}" class="w-full rounded-sm border border-gray-300 bg-gray-50 px-3 py-2 focus:bg-white focus:border-gold focus:ring-gold shadow-sm" required>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Tahun Terbit</label>
-                    <input type="number" name="published_year" value="{{ old('published_year') }}" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                    <input type="number" name="published_year" value="{{ old('published_year') }}" class="w-full rounded-sm border border-gray-300 bg-gray-50 px-3 py-2 focus:bg-white focus:border-gold focus:ring-gold shadow-sm" required>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">ISBN</label>
-                    <input type="text" name="isbn" value="{{ old('isbn') }}" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                    <input type="text" name="isbn" value="{{ old('isbn') }}" class="w-full rounded-sm border border-gray-300 bg-gray-50 px-3 py-2 focus:bg-white focus:border-gold focus:ring-gold shadow-sm" required>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Kategori</label>
-                    <select name="category" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>
+                    <select name="category" class="w-full rounded-sm border border-gray-300 bg-gray-50 px-3 py-2 focus:bg-white focus:border-gold focus:ring-gold shadow-sm" required>
                         <option value="" disabled selected>Pilih Kategori</option>
                         <option value="Ilmiah" {{ old('category') == 'Ilmiah' ? 'selected' : '' }}>Ilmiah</option>
                         <option value="Fiksi" {{ old('category') == 'Fiksi' ? 'selected' : '' }}>Fiksi</option>
@@ -41,7 +42,7 @@
 
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Deskripsi/Sinopsis</label>
-                <textarea name="description" rows="4" class="w-full rounded-sm border-gray-300 focus:border-gold focus:ring-gold shadow-sm" required>{{ old('description') }}</textarea>
+                <textarea name="description" rows="4" class="w-full rounded-sm border border-gray-300 bg-gray-50 px-3 py-2 focus:bg-white focus:border-gold focus:ring-gold shadow-sm" required>{{ old('description') }}</textarea>
             </div>
 
             {{-- BAGIAN COVER DENGAN PREVIEW --}}
