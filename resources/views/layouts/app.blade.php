@@ -5,7 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Urban Indragiri Press</title>
+<<<<<<< HEAD
     <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
+=======
+   <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
+   <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/logo.png') }}">
+>>>>>>> cd32283f88c28f134e4b039f89ed7060d851f07a
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
