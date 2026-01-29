@@ -16,10 +16,10 @@
     <div class="max-w-7xl mx-auto px-6 md:px-12">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
+            {{-- KOLOM KIRI: INFO KONTAK --}}
             <div>
                 <h2 class="font-serif text-4xl text-oxford mb-8">Informasi Kontak</h2>
 
-                {{-- BAGIAN KONTAK DIMULAI --}}
                 <div class="space-y-8 mb-10">
                     {{-- 1. Alamat --}}
                     <div class="flex items-start space-x-4">
@@ -38,7 +38,7 @@
                         </div>
                     </div>
 
-                    {{-- 2. Email (Diperbarui) --}}
+                    {{-- 2. Email --}}
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-oxford rounded-sm flex items-center justify-center flex-shrink-0 text-gold">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,33 +47,35 @@
                         </div>
                         <div>
                             <h3 class="font-sans text-lg font-bold text-oxford mb-1">Email</h3>
-                            <a href="mailto:press@urbanindragiripress.com" class="text-gray-600 hover:text-gold transition-colors">
-                                press@urbanindragiripress.com
+                            <a href="mailto:publisher@urbanmobindragiri.co.id" class="text-gray-600 hover:text-gold transition-colors">
+                                publisher@urbanmobindragiri.co.id
                             </a>
                         </div>
                     </div>
 
-                    {{-- 3. WhatsApp (Menggantikan Website) --}}
+                    {{-- 3. WhatsApp --}}
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-oxford rounded-sm flex items-center justify-center flex-shrink-0 text-gold">
-                            {{-- Ikon Telepon --}}
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                         </div>
-                        <h3 class="font-sans text-lg font-bold text-oxford mb-1">WhatsApp Admin</h3>
-                        <a href="https://wa.me/6281275392906?text=Halo%20Admin%2C%20saya%20ingin%20berkonsultasi%20mengenai%20penerbitan%20buku."
-                            target="_blank"
-                            class="text-gray-600 hover:text-gold transition-colors">
-                            +62 812-7539-2906
-                        </a>
+                        <div>
+                            <h3 class="font-sans text-lg font-bold text-oxford mb-1">WhatsApp Admin</h3>
+                            {{-- Perbaikan Link WhatsApp dengan pesan otomatis --}}
+                            <a href="https://wa.me/6281275392906?text=Halo%20Admin%2C%20saya%20ingin%20berkonsultasi%20mengenai%20penerbitan%20buku%20di%20Urban%20Indragiri%20Press."
+                                target="_blank"
+                                class="text-gray-600 hover:text-gold transition-colors">
+                                +62 812-7539-2906
+                            </a>
+                        </div>
                     </div>
                 </div>
-                {{-- BAGIAN KONTAK SELESAI --}}
 
+                {{-- MAPS (SUDAH DIPERBAIKI) --}}
                 <div class="rounded-sm overflow-hidden shadow-lg border border-oxford/10 h-[300px]">
                     <iframe
-                        src="https://maps.google.com/maps?q=Perum%20Griya%20Palas%20Mekar%20Blok%20K13%2C%20Kota%20Pekanbaru%2C%20Riau&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        src="https://maps.google.com/maps?q=Perum+Griya+Palas+Mekar+Blok+K13,+Kota+Pekanbaru,+Riau&t=&z=15&ie=UTF8&iwloc=&output=embed"
                         width="100%"
                         height="100%"
                         style="border:0;"
@@ -84,6 +86,7 @@
                 </div>
             </div>
 
+            {{-- KOLOM KANAN: FORM PESAN --}}
             <div>
                 <div class="bg-paper-white border border-oxford/10 rounded-sm p-8 shadow-lg">
                     <h2 class="font-serif text-3xl font-semibold text-oxford mb-6">Kirim Pesan</h2>
