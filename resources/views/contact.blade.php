@@ -19,12 +19,14 @@
             <div>
                 <h2 class="font-serif text-4xl text-oxford mb-8">Informasi Kontak</h2>
 
+                {{-- BAGIAN KONTAK DIMULAI --}}
                 <div class="space-y-8 mb-10">
+                    {{-- 1. Alamat --}}
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-oxford rounded-sm flex items-center justify-center flex-shrink-0 text-gold">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                         </div>
                         <div>
@@ -36,32 +38,38 @@
                         </div>
                     </div>
 
+                    {{-- 2. Email (Diperbarui) --}}
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-oxford rounded-sm flex items-center justify-center flex-shrink-0 text-gold">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                         </div>
                         <div>
                             <h3 class="font-sans text-lg font-bold text-oxford mb-1">Email</h3>
-                            <a href="mailto:publisher@urbanmobindragiri.co.id" class="text-gray-600 hover:text-gold transition-colors">
-                                publisher@urbanmobindragiri.co.id
+                            <a href="mailto:press@urbanindragiripress.com" class="text-gray-600 hover:text-gold transition-colors">
+                                press@urbanindragiripress.com
                             </a>
                         </div>
                     </div>
 
+                    {{-- 3. WhatsApp (Menggantikan Website) --}}
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 bg-oxford rounded-sm flex items-center justify-center flex-shrink-0 text-gold">
+                            {{-- Ikon Telepon --}}
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                         </div>
-                        <div>
-                            <h3 class="font-sans text-lg font-bold text-oxford mb-1">Website</h3>
-                            <p class="text-gray-600">www.urbanmobindragiri.co.id</p>
-                        </div>
+                        <h3 class="font-sans text-lg font-bold text-oxford mb-1">WhatsApp Admin</h3>
+                        <a href="https://wa.me/6281275392906?text=Halo%20Admin%2C%20saya%20ingin%20berkonsultasi%20mengenai%20penerbitan%20buku."
+                            target="_blank"
+                            class="text-gray-600 hover:text-gold transition-colors">
+                            +62 812-7539-2906
+                        </a>
                     </div>
                 </div>
+                {{-- BAGIAN KONTAK SELESAI --}}
 
                 <div class="rounded-sm overflow-hidden shadow-lg border border-oxford/10 h-[300px]">
                     <iframe

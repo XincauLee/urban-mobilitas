@@ -145,7 +145,7 @@
                         alt="Desi Wahana">
                 </div>
                 <h3 class="font-serif text-xl text-oxford mb-1">Desi Wahana</h3>
-                <p class="font-mono text-xs tracking-widest uppercase text-gold">Cover Desainer</p>
+                <p class="font-mono text-xs tracking-widest uppercase text-gold">Cover Designer</p>
             </div>
         </div>
     </div>

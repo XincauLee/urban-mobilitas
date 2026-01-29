@@ -88,7 +88,7 @@
         <p class="font-sans text-base md:text-lg leading-relaxed text-white/80 mb-8 max-w-2xl mx-auto">
             Bergabunglah dengan ratusan penulis yang telah mempercayakan karya mereka kepada kami. Mari wujudkan ide Anda menjadi buku yang menginspirasi.
         </p>
-        <a href="https://wa.me/6281275392906?text=Halo%20Admin%20PT%20Urban%20Mobilitas%20Indragiri,%20saya%20ingin%20konsultasi%20tentang%20penerbitan%20buku"
+        <a href="https://wa.me/6281275392906?text=Halo%20Admin%20Urban%20Indragiri%20Press,%20saya%20ingin%20konsultasi%20tentang%20penerbitan%20buku"
             target="_blank"
             class="inline-block bg-gold text-oxford hover:bg-gold/90 rounded-sm px-8 py-6 font-sans font-medium tracking-wide shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[0.98]">
             Konsultasi Sekarang

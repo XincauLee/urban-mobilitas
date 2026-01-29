@@ -98,7 +98,9 @@
         <p class="font-sans text-lg text-white/80 mb-8 max-w-2xl mx-auto">
             Kirimkan naskah Anda sekarang dan wujudkan impian menjadi penulis yang dipublikasikan.
         </p>
-        <a href="https://wa.me/628117522015" target="_blank" class="inline-block bg-gold text-oxford hover:bg-gold/90 rounded-sm px-8 py-4 font-sans font-bold tracking-wide shadow-lg transition-transform hover:scale-105">
+        <a href="https://wa.me/628117522015?text=Halo%2C%20saya%20tertarik%20menerbitkan%20buku%20di%20Urban%20Indragiri%20Press.%20Boleh%20minta%20info%20lebih%20lanjut%3F"
+            target="_blank"
+            class="inline-block bg-gold text-oxford hover:bg-gold/90 rounded-sm px-8 py-4 font-sans font-bold tracking-wide shadow-lg transition-transform hover:scale-105">
             Konsultasi Sekarang
         </a>
     </div>
