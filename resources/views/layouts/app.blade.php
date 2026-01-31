@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Urban Indragiri Press</title>
+    <title>PT. Urban Mobilitas Indragiri</title>
 
     <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
 
@@ -14,6 +14,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body class="antialiased flex flex-col min-h-screen relative font-sans text-gray-800 bg-paper-white">
@@ -30,8 +31,8 @@
                     <span class="text-gold font-serif font-bold text-xl">U</span>
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-serif font-semibold text-oxford text-lg leading-tight">Urban Indragiri</span>
-                    <span class="font-sans text-xs text-gray-500 tracking-wider">PRESS</span>
+                    <span class="font-serif font-semibold text-oxford text-lg leading-tight">PT. Urban Mobilitas</span>
+                    <span class="font-sans text-xs text-gray-500 tracking-wider">Indragiri</span>
                 </div>
             </a>
 
@@ -86,8 +87,8 @@
                             <span class="text-oxford font-serif font-bold text-2xl">U</span>
                         </div>
                         <div class="flex flex-col">
-                            <span class="font-serif font-semibold text-white text-xl leading-tight">Urban Indragiri</span>
-                            <span class="font-sans text-sm text-gold tracking-wider">PRESS</span>
+                            <span class="font-serif font-semibold text-white text-xl leading-tight">PT. Urban Mobilitas</span>
+                            <span class="font-sans text-sm text-gold tracking-wider">Indragiri</span>
                         </div>
                     </div>
                     <p class="text-white/70 leading-relaxed mb-6 font-sans text-sm">
@@ -152,7 +153,7 @@
 
             <div class="border-t border-white/10 mt-12 pt-8 text-center">
                 <p class="text-white/50 text-sm font-sans">
-                    &copy; {{ date('Y') }} Urban Indragiri Press — Member of PT. Urban Mobilitas Indragiri.
+                    &copy; {{ date('Y') }} PT Urban Mobilitas Indragiri.
                 </p>
             </div>
         </div>

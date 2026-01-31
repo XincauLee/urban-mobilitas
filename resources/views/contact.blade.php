@@ -118,6 +118,15 @@
                             <label class="block text-sm font-bold text-oxford mb-2">Pesan *</label>
                             <textarea name="message" rows="6" required class="w-full px-4 py-3 bg-white border border-oxford/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors resize-none" placeholder="Tulis pesan Anda di sini..."></textarea>
                         </div>
+                        <div class="mb-6">
+                            {{-- Widget Recaptcha Manual --}}
+                            <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}"></div>
+
+                            @error('g-recaptcha-response')
+                            <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
+
 
                         <button type="submit" class="w-full bg-oxford text-white hover:bg-oxford/90 rounded-sm px-8 py-4 font-sans font-medium tracking-wide shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[0.98]">
                             Kirim Pesan

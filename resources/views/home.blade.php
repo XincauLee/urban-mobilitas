@@ -86,7 +86,7 @@
             Siap Menerbitkan Karya Anda?
         </h2>
         <p class="font-sans text-base md:text-lg leading-relaxed text-white/80 mb-8 max-w-2xl mx-auto">
-            Bergabunglah dengan ratusan penulis yang telah mempercayakan karya mereka kepada kami. Mari wujudkan ide Anda menjadi buku yang menginspirasi.
+            Kami memegang teguh keyakinan bahwa segala gagasan patut diabadikan dalam bentuk buku, serta setiap penulis berhak memperoleh wadah yang mendukung pertumbuhan mereka.
         </p>
         <a href="https://wa.me/6281275392906?text=Halo%20Admin%20Urban%20Indragiri%20Press,%20saya%20ingin%20konsultasi%20tentang%20penerbitan%20buku"
             target="_blank"

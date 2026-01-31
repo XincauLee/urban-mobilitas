@@ -17,9 +17,11 @@ class PageController extends Controller
                 'icon' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />'
             ],
             [
-                'title' => "Legalitas Terjamin",
-                'description' => "Pengurusan ISBN resmi dan HKI untuk melindungi karya Anda",
+
+                'title' => "Cetak Sesuai Kebutuhan",
+                'description' => "Layanan Print on Demand (POD) untuk mencetak buku sesuai kebutuhan",
                 'icon' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />'
+
             ],
             [
                 'title' => "Support Penulis",
@@ -41,10 +43,12 @@ class PageController extends Controller
         $packages = Package::all();
         $services = [
             [
+
                 'id' => 1,
-                'title' => "Penerbitan Buku Ber-ISBN",
-                'description' => "Penerbitan resmi terdaftar di Perpustakaan Nasional dengan nomor ISBN yang menjamin legalitas dan kredibilitas karya Anda.",
+                'title' => "Seleksi Naskah",
+                'description' => "Naskahmu akan kami baca dan cek dulu. Kami pastikan isinya memang bagus dan layak sebelum naik cetak.",
                 'icon' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />'
+
             ],
             [
                 'id' => 2,
@@ -105,8 +109,8 @@ class PageController extends Controller
             [
                 'id' => 4,
                 'step' => "04",
-                'title' => "Legalisasi ISBN",
-                'description' => "Pengurusan nomor ISBN resmi dari Perpustakaan Nasional untuk legalitas buku."
+                'title' => "Persetujuan Akhir", // Atau "ACC Naskah"
+                'description' => "Validasi final terhadap tata letak dan desain visual untuk memastikan presisi. Proses produksi dieksekusi setelah mendapatkan persetujuan penuh."
             ],
             [
                 'id' => 5,
@@ -137,10 +141,10 @@ class PageController extends Controller
     {
         // Rekomendasi buku lain dengan kategori yang sama (acak 4 buku)
         $relatedBooks = Book::where('id', '!=', $book->id)
-                            ->where('category', $book->category)
-                            ->inRandomOrder()
-                            ->limit(4)
-                            ->get();
+            ->where('category', $book->category)
+            ->inRandomOrder()
+            ->limit(4)
+            ->get();
 
         return view('book-detail', compact('book', 'relatedBooks'));
     }

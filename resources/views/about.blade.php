@@ -26,11 +26,11 @@
                 <h2 class="font-serif text-4xl text-oxford mb-6">Profil Perusahaan</h2>
                 <div class="space-y-4 text-lg text-gray-600 leading-relaxed font-sans">
                     <p>
-                        <STRONG>Urban Indragiri Press</STRONG> adalah divisi penerbitan resmi di bawah naungan <strong>PT. Urban Mobilitas Indragiri</strong> hadir sebagai penerbit yang bergerak di bidang publikasi buku akademik, buku ajar, monograf, prosiding, dan buku umum.
+                        <strong>PT. Urban Mobilitas Indragiri</strong> adalah perusahaan penerbitan yang bergerak di bidang publikasi buku akademik,
+                        buku ajar perguruan tinggi, monograf, prosiding, dan buku umum. Penerbit ini berkomitmen mendukung
+                        pengembangan literasi dan karya ilmiah secara profesional dan berkelanjutan.
                     </p>
-                    <p>
-                        Kami berkomitmen untuk mendukung pengembangan literasi nasional dengan menyediakan layanan penerbitan yang rapi dan terstruktur, mulai dari penyuntingan naskah, tata letak (layout), hingga pengurusan legalitas seperti ISBN dan HKI. Kami berupaya memberikan hasil terbaik bagi setiap karya yang diterbitkan.
-                    </p>
+
                 </div>
             </div>
         </div>
