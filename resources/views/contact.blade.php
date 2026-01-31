@@ -47,8 +47,8 @@
                         </div>
                         <div>
                             <h3 class="font-sans text-lg font-bold text-oxford mb-1">Email</h3>
-                            <a href="mailto:publisher@urbanmobindragiri.co.id" class="text-gray-600 hover:text-gold transition-colors">
-                                publisher@urbanmobindragiri.co.id
+                            <a href="mailto:press@urbanindragiripress.com" class="text-gray-600 hover:text-gold transition-colors">
+                                press@urbanindragiripress.com
                             </a>
                         </div>
                     </div>
