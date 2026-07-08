@@ -41,7 +41,7 @@
             
             {{-- Card Buku --}}
             {{-- Perubahan: Hapus fade-in-section, ubah shadow jadi md, tambah border gold saat hover --}}
-            <div class="bg-white border border-gray-100 rounded-sm shadow-sm hover:shadow-md hover:border-gold/50 transition-all duration-300 group relative overflow-hidden flex flex-col h-full">
+            <a href="{{ route('book.detail', $book->uuid) }}" class="block bg-white border border-gray-100 rounded-sm shadow-sm hover:shadow-md hover:border-gold/50 transition-all duration-300 group relative overflow-hidden flex flex-col h-full">
                 
                 {{-- [PENTING] Elemen ini yang memunculkan garis emas saat hover --}}
                 <div class="gold-line"></div>
@@ -103,7 +103,7 @@
                     </div>
 
                 </div>
-            </div>
+            </a>
 
             @empty
             <div class="col-span-full py-24 text-center">

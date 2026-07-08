@@ -22,6 +22,7 @@ Route::get('/tentang', [PageController::class, 'about'])->name('about');
 Route::get('/layanan', [PageController::class, 'services'])->name('services');
 Route::get('/prosedur', [PageController::class, 'submission'])->name('submission');
 Route::get('/katalog', [PageController::class, 'portfolio'])->name('portfolio');
+Route::get('/buku/{book}', [PageController::class, 'bookDetail'])->name('book.detail');
 Route::get('/kontak', [PageController::class, 'contact'])->name('contact');
 
 Route::post('/kontak', [ContactController::class, 'store'])->name('contact.store');
@@ -69,4 +70,16 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::resource('books', AdminBookController::class);
     Route::resource('packages', AdminPackageController::class); // <-- Route Baru
     Route::resource('messages', AdminMessageController::class)->only(['index', 'destroy']);
+});
+
+// RUTE SEMENTARA UNTUK MEMPERBAIKI UUID DI CPANEL
+Route::get('/fix-uuid', function() {
+    $books = \App\Models\Book::whereNull('uuid')->get();
+    $count = 0;
+    foreach($books as $book) {
+        $book->uuid = (string) \Illuminate\Support\Str::uuid();
+        $book->save();
+        $count++;
+    }
+    return "Berhasil memperbarui UUID untuk " . $count . " buku lama!";
 });
